@@ -1,0 +1,314 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: #ffc;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    outline: none;
+}
+
+a:visited {
+    text-decoration: none;
+    outline: none;
+}
+
+a:active {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    color: #333;
+    text-decoration: none;
+    outline: none;
+}
+
+.main-page-logo {
+    display: block;
+}
+
+.main-page-label, .car-index-page-label, .city-single-page-label, .lease-request-page-label, .lease-request-page-car-info-label {
+    text-align: center;
+    display: block;
+}
+
+.lease-request-page-label {
+    padding-bottom: 50px;
+}
+
+.city-single-page-label {
+    padding-top: 20px;
+}
+
+.lease-request-page-car-info-label, .lease-request-page-form-label {
+    padding-bottom: 20px;
+}
+
+.city-item-container, .car-item-container, .city-index-item-container {
+    display: block;
+    padding: 30px 0 50px;
+    text-align: center;
+}
+
+.city-item-block {
+    display: inline-block;
+    width: 20%;
+    margin: 0 1%;
+}
+
+.city-item-block-image, .city-index-item-block-image {
+    min-height: 150px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+}
+
+.city-item-block-name {
+    padding-top: 10px;
+    font-size: 19px;
+}
+
+.city-index-item-block {
+    display: inline-block;
+    width: 28%;
+    margin: 0 2% 4%;
+    padding: 15px;
+    background: #fcfcb5;
+    box-shadow: 0 0 8px rgba(100, 100, 100, .25);
+}
+
+.city-index-item-block-name {
+    padding-top: 12px;
+    font-size: 21px;
+}
+
+.car-item-block {
+    display: inline-block;
+    width: 28%;
+    margin: 0 2% 4%;
+    padding-bottom: 20px;
+    background: #fcfcb5;
+    padding: 16px;
+    box-shadow: 0 0 8px rgba(100, 100, 100, .25);
+    transition: background 0.4s;
+}
+
+.car-item-block-info {
+    text-align: left;
+}
+
+.car-item-block-image {
+    min-height: 150px;
+}
+
+.car-item-block-model-name {
+    display: block;
+    text-align: center;
+    padding: 10px 0 12px;
+    font-size: 1.2rem;
+}
+
+.car-item-block-info-line {
+    padding-top: 4px;
+    padding-left: 10px;
+}
+
+.car-item-block:hover {
+    background: #f9f993;
+}
+
+.item-image {
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #bbb;
+}
+
+.car-single-page-container {
+    position: relative;
+    margin: 60px auto 0;
+    width: 1280px;
+    padding-top: 20px;
+}
+
+.car-single-page-image {
+    width: 550px;
+}
+
+.car-single-page-info {
+    text-align: left;
+    font-size: 1.25rem;
+}
+
+.car-single-page-info-block {
+    padding-bottom: 20px;
+}
+
+.car-single-page-line {
+    padding-bottom: 6px;
+}
+
+.car-single-page-line span {
+    padding-right: 8px;
+    font-weight: bold;
+}
+
+.car-single-page-image {
+    position: absolute;
+    left: 5px;
+}
+
+.car-single-page-info {
+    width: 600px;
+    position: absolute;
+    right: 5px;
+}
+
+.car-single-page-request-link {
+    font-size: 1.35rem;
+    color: #f96;
+}
+
+.car-single-page-request-link:hover {
+    color: #fb9;
+}
+
+.lease-request-form-button-block {
+    padding-top: 20px;
+}
+
+.lease-request-page-car-info-carname {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 15px 0 10px;
+}
+
+.lease-request-page-car-info-line {
+    font-size: 1.1rem;
+    padding-top: 15px;
+}
+
+.lease-request-page-container {
+    position: relative;
+    width: 1280px;
+}
+
+.lease-request-page-car-info-block, .lease-request-page-form-block {  
+    width: 500px;
+    position: absolute;   
+}
+
+.lease-request-page-car-info-block {
+    text-align: left;
+    left: 5px;
+}
+
+.lease-request-page-form-block {
+    text-align: left;
+    right: 5px;
+}
+
+.lease-request-test-mode-message {
+    color: #aaa;
+    padding-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.lease-request-form-item {
+    padding-bottom: 10px;
+}
+
+.lease-request-form-item input {
+    width: 250px;
+    display: block;
+    margin: 3px 0;
+}
+
+.lease-request-form-button-block {
+    padding-top: 40px;
+}
+
+.lease-request-form-button-block input {
+    width: 300px;
+    padding: 6px 12px;
+    font-size: 1.1rem;
+}
+
+.lease-item-container {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.lease-index-table {
+    border: 1px solid #999;
+    width: 1050px;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.lease-index-table td, .lease-index-table th {
+    padding: 5px 12px;
+    border: 1px solid #999;
+}
+
+.footer {
+    background: #ffddaa;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 7%);
+}
+
+.footer-text {
+    text-align: center;
+}
+
+.high-menu {
+    display: block;
+    height: 60px;
+    text-align: center;
+    background: #ffddaa;
+    box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 5%);
+    margin-bottom: 30px;
+}
+
+.high-menu-logo {
+    position: absolute;
+    display: block;
+    top: 12px;
+    left: 10px;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.high-menu ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.high-menu ul li {
+    display: inline-block;
+    margin: 0 1%;
+    padding-top: 8px;
+}
+
+.high-menu ul a {
+    font-size: 1.1rem;
+    display: inline-block;
+}
+
+.dark-color-link a {
+    color: #555;
+}

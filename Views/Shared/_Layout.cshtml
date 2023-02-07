@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SearchNavigator</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SearchNavigator.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="high-menu">
+            <a class="high-menu-logo" asp-controller="Site" asp-action="Index">Аренда-Авто-Сервис</a>
+            <ul>
+                <li>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Site" asp-action="Index">Стартовая</a>
+                </li>
+                <li>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Car" asp-action="Index">Автомобили</a>
+                </li>
+                <li>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="City" asp-action="Index">Города</a>
+                </li>
+                <li>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Вход в админку</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer text-muted">
+        <div class="container footer-text">
+            &copy; 2023 - Аренда транспорта
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

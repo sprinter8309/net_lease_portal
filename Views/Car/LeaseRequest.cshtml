@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Оформить заявку";
+}
+@model CarLeaseRequestModel
+
+<div class="text-center">
+    <h2 class="lease-request-page-label">Заявка на аренду</h2>
+
+    <div class="lease-request-page-container">
+
+        <div class="lease-request-page-car-info-block">
+            <h3 class="lease-request-page-car-info-label">Автомобиль</h3>
+            <div>
+                <img src="@Model.CarPreviewImage" class="item-image">
+            </div>
+            <div class="lease-request-page-car-info-carname">
+                @(Model.CarBrand) @(Model.CarModel)
+            </div>
+            <div class="lease-request-page-car-info-line">
+                Город: @(Model.CarCity)
+            </div>
+            <div class="lease-request-page-car-info-line">
+                Цена аренды: @(Model.CarLeaseRate.ToString("F0")) руб./сутки
+            </div>
+        </div>
+
+        <div class="lease-request-page-form-block">
+
+            <h3 class="lease-request-page-form-label">Данные клиента</h3>
+
+            <p class="lease-request-test-mode-message">В тестовом проекте заявка сразу оформляется в аренду для демонстрации функционала</p> 
+
+            <form asp-action="LeaseRequest" asp-controller="Car" method="post">                
+                <div class="lease-request-form-item">
+                    <label asp-for="PersonName">Имя клиента</label>
+                    <input asp-for="PersonName">
+                    <span asp-validation-for="PersonName" class="text-danger"></span>
+                </div>
+                <div class="lease-request-form-item">
+                    <label asp-for="PersonPhone">Телефон</label>
+                    <input asp-for="PersonPhone">
+                    <span asp-validation-for="PersonPhone" class="text-danger"></span>
+                </div>
+                <div class="lease-request-form-item">
+                    <label asp-for="PersonEmail">Email</label>
+                    <input asp-for="PersonEmail">
+                    <span asp-validation-for="PersonEmail" class="text-danger"></span>
+                </div>
+                <div class="lease-request-form-item">
+                    <label asp-for="PersonPassportNumber">Номер паспорта</label>
+                    <input asp-for="PersonPassportNumber">
+                    <span asp-validation-for="PersonPassportNumber" class="text-danger"></span>
+                </div>
+                <input type="hidden" asp-for="CarId">
+                <div class="lease-request-form-button-block">
+                    <input type="submit" value="Оформить заявку">
+                </div>
+            </form>   
+        </div>
+    </div>
+</div>

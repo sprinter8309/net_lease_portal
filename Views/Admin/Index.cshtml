@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Административная панель";
+}
+@model SearchNavigator.Models.AdminIndexModel
+
+<div class="main-page-container">
+    <h2 class="main-page-label">Имеющиеся аренды:</h2>
+
+    <div class="lease-item-container">
+        <table class="lease-index-table">    
+            <tr>
+                <th>Машина</th>
+                <th>Год выпуска</th>
+                <th>Дорожный номер</th>
+                <th>Рента</th>
+                <th>Город</th>
+                <th>Имя клиента</th>
+                <th>Телефон клиента</th>
+            </tr>
+            @foreach (var leaseItem in Model.leases)
+            {
+                <tr>
+                    <td>@(leaseItem.CarBrand) @(leaseItem.CarModel) (@(leaseItem.CarColor))</td>
+                    <td>@(leaseItem.CarIssueYear)</td>
+                    <td>@(leaseItem.CarNumber)</td>
+                    <td>@(leaseItem.CarLeaseRate.ToString("F0")) руб./сутки</td>
+                    <td>@(leaseItem.CarCity)</td>
+                    <td>@(leaseItem.PersonName)</td>
+                    <td>@(leaseItem.PersonPhone)</td>
+                </tr>
+            }           
+        </table>
+    </div>
+</div>

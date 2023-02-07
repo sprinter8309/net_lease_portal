@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Города";
+}
+@model SearchNavigator.Models.CityIndexModel
+
+<div class="text-center">
+    <h2 class="main-page-label">Список городов</h2>
+
+    <div class="city-index-item-container">
+        @foreach (var cityItem in Model.cities)
+        {
+            <a asp-controller="City" asp-action="Single" asp-route-id="@cityItem.Id">
+                <div class="city-index-item-block">
+                    <div class="city-index-item-block-image"><img src="@cityItem.PreviewImage" class="item-image"></div>
+                    <div class="city-index-item-block-name">@cityItem.Name</div>
+                </div>
+            </a>
+        }
+    </div>   
+</div>

@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Список доступных машин";
+}
+@model SearchNavigator.Models.CarIndexModel
+
+<div class="text-center">
+    <h2 class="car-index-page-label">Список доступных машин</h2>
+
+    <div class="car-item-container">
+        @foreach (var carItem in Model.cars)
+        {
+            <a asp-controller="Car" asp-action="Single" asp-route-id="@carItem.Id">
+                <div class="car-item-block">
+                    <div class="car-item-block-image"><img src="@carItem.PreviewImage" class="item-image"></div>
+                    <div class="car-item-block-info">
+                        <div class="car-item-block-model-name dark-color-link">
+                            @carItem.Brand.Name @carItem.Model
+                        </div>
+                        <div class="car-item-block-info-line">
+                            Город: @carItem.City.Name
+                        </div>
+                        <div class="car-item-block-info-line">
+                            Год выпуска: @carItem.IssueYear
+                        </div>
+                        <div class="car-item-block-info-line">
+                            Мощность: @carItem.EnginePower л.с.
+                        </div>
+                        <div class="car-item-block-info-line">
+                            Цена: от @carItem.LeaseRate.ToString("F0") руб./сутки
+                        </div>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+</div>

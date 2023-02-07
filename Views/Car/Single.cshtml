@@ -1,0 +1,38 @@
+﻿@using SearchNavigator.Helpers;
+
+@model SearchNavigator.Models.CarSingleModel
+
+@{
+    ViewData["Title"] = "Машина " + (Model.CarItem.Brand.Name) + (Model.CarItem.Model);
+}
+
+<div class="text-center">
+    <h2 class="main-page-label">@(Model.CarItem.Brand.Name) @(Model.CarItem.Model)</h2>
+
+    <div class="car-single-page-container">
+        <div class="car-single-page-image">
+            <img src="@(Model.CarItem.PreviewImage)" class="item-image">
+        </div>
+
+        <div class="car-single-page-info">
+            <div class="car-single-page-info-block">
+                <div class="car-single-page-line"><span>Город:</span> @(Model.CarItem.City.Name)</div>
+                <div class="car-single-page-line"><span>Цена аренды:</span> @(Model.CarItem.LeaseRate.ToString("F0")) руб./сутки</div>
+            </div>
+            <div class="car-single-page-info-block">
+                <div class="car-single-page-line"><span>Год выпуска:</span> @(Model.CarItem.IssueYear)</div>
+                <div class="car-single-page-line"><span>Мощность двигателя:</span> @(Model.CarItem.EnginePower) л.с.</div>
+                <div class="car-single-page-line"><span>Коробка передач:</span> @(DisplayHelper.GetTransmissionTranslate(Model.CarItem.Transmission))</div>
+            </div>
+            <div class="car-single-page-info-block">
+                <div class="car-single-page-line"><span>Цвет:</span> @(Model.CarItem.Color)</div>
+                <div class="car-single-page-line"><span>Дорожный номер:</span> @(Model.CarItem.Number)</div>
+            </div> 
+            <div>
+                <a class="car-single-page-request-link" asp-controller="Car" asp-action="LeaseRequest" asp-route-id="@Model.CarItem.Id">Оформить заявку на аренду</a>
+            </div>
+        </div>  
+    </div>
+    
+    
+</div>
